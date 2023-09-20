@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11pt"
+        android:text="@string/enter_a_required_data"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/reqdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="[URL|telephoneNumber|geodata]" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:id="@+id/rbtns"
+
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/is_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="onClickURL"
+                    android:text="URL" />
+
+                <RadioButton
+                    android:id="@+id/is_geo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="onClickGEO"
+                    android:text="GeoData"
+                    />
+
+                <RadioButton
+                    android:id="@+id/is_telephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="onClickTelephone"
+                    android:text="Telephone Number"
+                    />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/btnReset"
+        android:onClick="onClickReset"
+        android:layout_gravity="end"
+        />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    android:id="@+id/btnSubmit"
+    android:onClick="onClick"
+    android:layout_gravity="center"
+    />
+
+</LinearLayout>

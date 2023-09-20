@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ActionHandler</string>
+    <string name="enter_a_required_data">Enter a required data:</string>
+</resources>
